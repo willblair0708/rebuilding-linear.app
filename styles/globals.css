@@ -6,11 +6,11 @@
   :root {
     --navigation-height: 4.8rem;
     --primary-dark: #001e42;
-    --primary-mid-dark: #003463;
-    --primary-mid-light: #005384;
-    --primary-light: #0074DB;
-    --secondary-light: #40A4F4;
-    --tertiary-light: #80D4FF;
+    --primary-mid-dark: #002657;
+    --primary-mid-light: #00346d;
+    --primary-light: #004283;
+    --secondary-light: #005099;
+    --tertiary-light: #005eb0;
   }
 
   html {
