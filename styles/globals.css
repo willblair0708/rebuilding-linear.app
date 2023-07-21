@@ -9,7 +9,9 @@
 }
 
 html {
-  @apply bg-var(--deep-blue) font-sans text-var(--off-white);
+  background-color: var(--deep-blue);
+  font-family: sans-serif;
+  color: var(--off-white);
   font-size: 62.5%;
 }
 
