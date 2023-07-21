@@ -5,42 +5,66 @@
 :root {
     --navigation-height: 4.8rem;
     --primary-color: #001e42;
+    --secondary-color: #ffffff;
+    --tertiary-color: #001e42;
+    --accent-color: #F56060;
+    --primary-color-light: hsl(225, 59%, 45%);
+    --primary-color-dark: #10163A;
     --text-off-white: #F5F5F5;
     --text-shadow-color: rgba(0, 0, 0, 0.56);
-    --gradient-color-1: rgb(255, 255, 255);
-    --gradient-color-2: rgba(255, 255, 255, 0.38);
+    --gradient-color-1: #ffffff;
+    --gradient-color-2: #f6f6f6;
     --mask-color-1: black;
     --mask-color-2: transparent;
+    --font-size: 62.5%;
+    --glass-background: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
 }
 
 html {
     background-color: var(--primary-color);
-    font-family: 'Sans', sans-serif;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
     color: var(--text-off-white);
-    font-size: 62.5%;
+    font-size: var(--font-size);
     transition: background-color 0.3s linear;
 }
 
-.highlighted-keys .active rect:first-child {
-    fill-opacity: 0.4;
+.body {
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s linear;
 }
 
-.highlighted-keys .active rect:not(:first-child) {
-    stroke-opacity: 1;
+.navbar {
+    height: var(--navigation-height);
+    background-color: var(--primary-color-dark);
+    color: var(--text-off-white);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
 }
 
-.highlighted-keys .active path {
-    fill-opacity: 1;
+.navbar a {
+    color: var(--text-off-white);
 }
 
-.text-shadow {
-    text-shadow: var(--text-shadow-color) 0px 3px 12px;
+.card {
+    background: var(--glass-background);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
 }
 
-.text-gradient {
-    background: linear-gradient(to right bottom, var(--gradient-color-1) 30%, var(--gradient-color-2));
-    background-clip: text;
-    color: transparent;
+.button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--primary-color-dark);
 }
 
 .mask-radial-faded {
@@ -61,7 +85,27 @@ html {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary-color: #121212;
+        --primary-color: var(--primary-color-dark);
         --text-off-white: #ffffff;
+        --glass-background: rgba(0, 0, 0, 0.4);
+        --glass-border: rgba(255, 255, 255, 0.1);
+    }
+
+    html {
+        background-color: var(--tertiary-color);
+    }
+
+    .body {
+        background-color: var(--primary-color);
+    }
+
+    .navbar {
+        background-color: var(--tertiary-color);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-size: 50%;
     }
 }
