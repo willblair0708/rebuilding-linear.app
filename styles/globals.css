@@ -61,7 +61,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .card {
-  @apply bg-off-white text-deep-blue shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500;
+  background-color: var(--off-white);
+  color: var(--deep-blue);
+  @apply shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500;
 }
 
 .card:hover {
