@@ -5,11 +5,18 @@
 @layer base {
   :root {
     --navigation-height: 4.8rem;
+    --primary-dark: #001e42;
+    --primary-mid-dark: #003463;
+    --primary-mid-light: #005384;
+    --primary-light: #0074DB;
+    --secondary-light: #40A4F4;
+    --tertiary-light: #80D4FF;
   }
 
   html {
     @apply bg-background font-sans text-off-white;
     font-size: 62.5%;
+    background: linear-gradient(to right, var(--primary-dark), var(--primary-mid-dark), var(--primary-mid-light), var(--primary-light), var(--secondary-light), var(--tertiary-light));
   }
 
   .highlighted-keys .active rect:first-child {
@@ -31,7 +38,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.38));
+    background: linear-gradient(to right, var(--primary-dark), var(--primary-mid-dark), var(--primary-mid-light), var(--primary-light), var(--secondary-light), var(--tertiary-light));
     background-clip: text;
     color: transparent;
   }
