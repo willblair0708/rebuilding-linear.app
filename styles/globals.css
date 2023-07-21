@@ -6,13 +6,10 @@
   --deep-blue: #001e42;
   --off-white: #F5F5F5;
   --navigation-height: 4.8rem;
-  --secondary-color: #0079ff;
 }
 
 html {
-  background-color: var(--deep-blue);
-  font-family: sans-serif;
-  color: var(--off-white);
+  @apply bg-var(--deep-blue) font-sans text-var(--off-white);
   font-size: 62.5%;
 }
 
@@ -20,56 +17,44 @@ body {
   @apply transition-all ease-in-out duration-500;
 }
 
-body::-webkit-scrollbar {
-  width: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: var(--secondary-color);
-  border-radius: 10px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: var(--off-white);
-}
-
 .highlighted-keys .active rect:first-child {
   fill-opacity: 0.4;
-  animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-  0% {
-    fill-opacity: 0.4;
-  }
-  50% {
-    fill-opacity: 1;
-  }
-  100% {
-    fill-opacity: 0.4;
-  }
+.highlighted-keys .active rect:not(:first-child) {
+  stroke-opacity: 1;
+}
+
+.highlighted-keys .active path {
+  fill-opacity: 1;
+}
+
+.text-shadow {
+  text-shadow: rgb(0 0 0 / 56%) 0px 3px 12px;
 }
 
 .text-gradient {
-  background: linear-gradient(to right bottom, var(--secondary-color) 30%, rgba(255, 255, 255, 0.38));
+  background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.38));
   background-clip: text;
   color: transparent;
 }
 
+.mask-radial-faded {
+  mask-image: radial-gradient(circle at center center, black, transparent 80%);
+}
+
+.mask-linear-faded {
+  mask-image: linear-gradient(black, transparent 70%);
+}
+
+.mask-keyboard {
+  mask-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.57) 33.98%, black 100%);
+}
+
+.mask-shortcutkeys {
+  mask-image: linear-gradient(to right, transparent, black 40%, black calc(60%), transparent 100%);
+}
+
 .grid-container {
   @apply grid grid-cols-12 gap-4;
-}
-
-.card {
-  background-color: var(--off-white);
-  color: var(--deep-blue);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  transform: scale(1);
-  transition: transform 0.5s ease-in-out;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.card:hover {
-  transform: scale(1.05) rotate(3deg);
 }
