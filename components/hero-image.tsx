@@ -115,9 +115,9 @@ export const HeroImage = () => {
         autoPlay
         muted
         loop
-        src="/img/hero.mp4"
-        type="video/mp4"
-        />
+        >
+        <source src="/img/hero.mp4" type="video/mp4"/>
+        </video>
       </div>
     </div>
   );
