@@ -8,8 +8,8 @@
     --secondary-color: #ffffff;
     --tertiary-color: #001e42;
     --accent-color: #F56060;
-    --primary-color-light: hsl(225, 59%, 45%);
-    --primary-color-dark: #10163A;
+    --primary-color-light: #2952a3;
+    --primary-color-dark: #000921;
     --text-off-white: #F5F5F5;
     --text-shadow-color: rgba(0, 0, 0, 0.56);
     --gradient-color-1: #ffffff;
@@ -23,7 +23,7 @@
 
 html {
     background-color: var(--primary-color);
-    font-family: 'Roboto', 'Open Sans', sans-serif;
+    font-family: 'Inter', 'Roboto', 'Open Sans', sans-serif;
     color: var(--text-off-white);
     font-size: var(--font-size);
     transition: background-color 0.3s linear;
@@ -48,19 +48,21 @@ html {
 
 .card {
     background: var(--glass-background);
-    border-radius: 10px;
+    border-radius: 15px;
     backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .button {
     background-color: var(--accent-color);
     color: white;
     padding: 15px 30px;
-    border-radius: 5px;
+    border-radius: 50px;
     text-transform: uppercase;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .button:hover {
