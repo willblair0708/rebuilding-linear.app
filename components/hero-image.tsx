@@ -99,13 +99,24 @@ export const HeroImage = () => {
           <path pathLength="1" d="M538 777L538 128"></path>
         </svg>
 
-        <img
+        {/* <img
           className={classNames(
             "relative z-10 transition-opacity delay-[680ms]",
             inView ? "opacity-100" : "opacity-0"
           )}
           src="/img/hero.webp"
           alt="Hero image"
+        /> */}
+        <video
+        className={classNames(
+          "relative z-10 transition-opacity delay-[680ms]",
+          inView ? "opacity-100" : "opacity-0"
+        )}
+        autoPlay
+        muted
+        loop
+        src="/img/hero.mp4"
+        type="video/mp4"
         />
       </div>
     </div>

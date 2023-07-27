@@ -16,10 +16,10 @@ export default function Homepage() {
           <HomepageHero />
         </Container>
       </div>
-      <Container>
+      {/* <Container>
         <Clients />
-      </Container>
-      <div
+      </Container> */}
+      {/* <div
         className={classNames(
           "mask-radial-faded pointer-events-none relative z-[-1] my-[-12.8rem] h-[60rem] overflow-hidden",
           "[--color:#7877C6] before:absolute before:inset-0 before:bg-radial-faded before:opacity-[0.4]",
@@ -27,8 +27,8 @@ export default function Homepage() {
         )}
       >
         <StarsIllustration />
-      </div>
-      <UnlikeAnyTool />
+      </div> */}
+      {/* <UnlikeAnyTool /> */}
 
       <EnjoyIssueTracking />
       <BuildMomentum />

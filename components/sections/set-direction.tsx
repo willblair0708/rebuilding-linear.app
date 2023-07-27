@@ -21,7 +21,7 @@ export const SetDirection = () => {
             with Roadmaps
           </>
         }
-        image="/roadmap.webp"
+        image="/analysis.png"
         imageSize="large"
         text="Plan visually, collaborate in cross-team projects, and make better decisions with progress insights and project updates."
       />
